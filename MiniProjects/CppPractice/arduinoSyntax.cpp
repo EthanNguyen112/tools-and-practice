@@ -13,6 +13,7 @@ void setup(){ // initializing the pins to use for arduino
     cout << "Enter Input between i (increment) or d (decrement): ";
     cin >> op;
     //cout << s1 << endl;
+
 }
 
 void increment(){
@@ -34,17 +35,18 @@ void decrement(){
     //cout << i << endl;
 
     }
-
+    x = x - dc;
 }
 
 int main(){ //for arduino it would be void loop {
-    setup();
+    //setup();
+    do { //do while loop is only good for this case.
+        cout << "Please enter i or d" << endl;
+        cout << op << endl; 
 
-    while (op != ("d" || "i")){ // some error with while loop statement
-
-        cout << "Please enter i or d" << endl; 
-        cin >> op;
     }
+    while (op != "d"); //something wrong with the case statement
+    
 
     if (op == i){
     increment();
