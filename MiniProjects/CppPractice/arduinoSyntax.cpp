@@ -41,20 +41,23 @@ void decrement(){
 int main(){ //for arduino it would be void loop {
     //setup();
     do { //do while loop is only good for this case.
-        cout << "Please enter i or d" << endl;
+        cout << "Please enter i (increase) or d(decrease) :";
+        
+        cin >> op; 
         cout << op << endl; 
-
     }
-    while (op != "d"); //something wrong with the case statement
+    while (op == 'd'|| op == 'i'); 
     
 
     if (op == i){
     increment();
+    cout << "incrementing";
     }
     
     if (op == d){ 
     
     decrement();
+    cout << "decrementing";
     }
 
     
