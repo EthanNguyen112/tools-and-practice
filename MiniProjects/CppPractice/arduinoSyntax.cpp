@@ -3,8 +3,6 @@ using namespace std;
 
 int x;   //variable to change
 char op;  //operator to either increment or decrement
-char i;  //increment flag
-char d;  //decrement flag
 int inc; //increment number
 int dc;  //decrement number
 
@@ -39,22 +37,23 @@ void decrement(){
 }
 
 int main(){ //for arduino it would be void loop {
-    //setup();
-    do { //do while loop is only good for this case.
+    setup();
+    cout << op << endl; 
+
+    while (op != 'd' && op != 'i'){
         cout << "Please enter i (increase) or d(decrease) :";
         
         cin >> op; 
         cout << op << endl; 
     }
-    while (op == 'd'|| op == 'i'); 
     
 
-    if (op == i){
+    if (op == 'i'){
     increment();
     cout << "incrementing";
     }
     
-    if (op == d){ 
+    if (op == 'd'){ 
     
     decrement();
     cout << "decrementing";
