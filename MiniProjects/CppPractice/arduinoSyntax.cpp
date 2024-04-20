@@ -50,13 +50,13 @@ int main(){ //for arduino it would be void loop {
 
     if (op == 'i'){
     increment();
-    cout << "incrementing";
+    cout << "incrementing"<< endl;
     }
     
     if (op == 'd'){ 
     
     decrement();
-    cout << "decrementing";
+    cout << "decrementing"<< endl;
     }
 
     
