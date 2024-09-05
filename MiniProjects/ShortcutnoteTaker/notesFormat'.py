@@ -1,17 +1,19 @@
-import re
+# Initialize list of unwanted characters
+bad_chars = ['•']
+repeatflag = 0
+# Initialize test string
+while (repeatflag==0):
+    test_string = 0;
+    test_string = input('Enter: \n') 
 
+    # Print original string
+    print('\n')
 
-sentence = input('ENTER: \n')
-words = list(filter(lambda word: not any(char.isdigit()
-										for char in word), sentence.split()))
+    # Use map and lambda function to remove bullet points and replaced with return for formating
+    filtered_string = ''.join(map(lambda x: x if x not in bad_chars else '\n', test_string))
 
+    # Print filtered string
+    print(filtered_string)
+    print('\n')
+    repeatflag = input( '0 for continue, 1 for exit \n')
 
-input = eval(input()) #if possible find a safer thing than this code or learn form it??
-
-sentence = input.split() #split the sentence into individual words
-
-if sentence in words: #see if one of the words in the sentence is the word we want
-    
-   #add code to enter to change '•' to a return key \n
-   
-print(words) # Output: ['Hello', 'Geeks', 'for', 'geeks']
