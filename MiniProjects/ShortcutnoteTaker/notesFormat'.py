@@ -1,4 +1,4 @@
-#Information must be copied from a document, NOT a powerpoint slide
+#Information not have any special characters except for "•"
 #Enter copied information and will return a formated copy
 
 #ToDo: Make the function into a while loop
